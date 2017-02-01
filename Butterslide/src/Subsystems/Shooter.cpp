@@ -4,12 +4,9 @@
 #include "LiveWindow/LiveWindow.h"
 #include "ShootSetPoint.h"
 
-Shooter::Shooter() : PIDSubsystem("Shooter", 1.0, 0.0, 0.0, 1.0) {
-    PIDSubsystem::SetSetpoint(1.0);
 Shooter::Shooter() : PIDSubsystem("Shooter", 1.0, 0.0, 0.0, 0.0) {
 	gun = RobotMap::rpg1;
     SetAbsoluteTolerance(0.2);
-    GetPIDController()->SetContinuous(false);
     GetPIDController()->SetContinuous(true);
     LiveWindow::GetInstance()->AddActuator("Shooter", "PIDSubsystem Controller", GetPIDController());
 	gun = RobotMap::rpg1;
