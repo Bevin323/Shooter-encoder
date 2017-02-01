@@ -2,7 +2,7 @@
 #include "../RobotMap.h"
 #include "SmartDashboard/SmartDashboard.h"
 #include "LiveWindow/LiveWindow.h"
-#include "ShootSetPoint.h"
+#include "../Commands/ShootSetPoint.h"
 
 Shooter::Shooter() : PIDSubsystem("Shooter", 1.0, 0.0, 0.0, 0.0) {
 	gun = RobotMap::rpg1;
