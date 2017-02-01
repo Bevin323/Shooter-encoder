@@ -13,9 +13,14 @@ void Shooting::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void Shooting::Execute() {
-
+if(RobotMap::rpg1->Get() == 0){
+		Robot::rpg->ImaFireInMaleeba(1);
 }
 
+else {
+	    Robot::rpg->ImaFireInMaleeba(0);
+}
+}
 
 // Make this return true when this Command no longer needs to run execute()
 bool Shooting::IsFinished() {

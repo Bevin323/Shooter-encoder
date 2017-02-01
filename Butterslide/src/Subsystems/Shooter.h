@@ -17,6 +17,7 @@ public:
 	Shooter();
 
 	void InitDefaultCommand();
+	void ImaFireInMaleeba(float speed);
 	double ReturnPIDInput();
 	void UsePIDOutput(double output);
 };

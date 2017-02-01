@@ -1,12 +1,13 @@
-#ifndef Shooting_H
-#define Shooting_H
+#ifndef ShootSetPoint_H
+#define ShootSetPoint_H
 
 #include "../Robot.h"
 #include "Commands/Subsystem.h"
 
-class Shooting : public Command {
+class ShootSetPoint : public Command {
 public:
-	Shooting();
+	double setpoint;
+	ShootSetPoint(double);
 	void Initialize();
 	void Execute();
 	bool IsFinished();
@@ -14,4 +15,4 @@ public:
 	void Interrupted();
 };
 
-#endif  // Shooting_H
+#endif  // ShootSetPoint_H
